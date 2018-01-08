@@ -1,0 +1,9 @@
+* Vim-uncommented
+
+Simple plugin to jump to next/previous uncommented line in file.
+
+** Configuration
+
+~nnoremap <Leader>n <Plug>NextUncommented~
+
+~nnoremap <Leader>p <Plug>PrevUncommented~
