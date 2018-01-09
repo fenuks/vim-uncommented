@@ -24,8 +24,8 @@ function! s:GoToUncommented(direction)
     call search('\v^(\s*' . l:commentbeg . ')@!', 'Wz' . a:direction)
 endfunction
 
-noremap <unique> <script> <Plug>PrevUncommented :call <SID>GoToUncommented('b')<CR>
-noremap <unique> <script> <Plug>NextUncommented :call <SID>GoToUncommented('')<CR>
+nnoremap <script> <unique> <Plug>(PrevUncommented) :call <SID>GoToUncommented('b')<CR>
+nnoremap <script> <unique> <Plug>(NextUncommented) :call <SID>GoToUncommented('')<CR>
 
 " TODO:
 " - ignore blank lines

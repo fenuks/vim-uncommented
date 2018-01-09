@@ -2,8 +2,8 @@
 
 Simple plugin to jump to next/previous uncommented line in file.
 
-** Configuration
+** Example configuration
 
-~nnoremap <Leader>n <Plug>NextUncommented~
+~nnoremap <Leader>n <Plug>(NextUncommented)~
 
-~nnoremap <Leader>p <Plug>PrevUncommented~
+~nnoremap <Leader>p <Plug>(PrevUncommented)~
