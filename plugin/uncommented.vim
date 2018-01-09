@@ -21,12 +21,11 @@ function! s:GoToUncommented(direction)
         return
     endif
 
-    call search('\v^(\s*' . l:commentbeg . ')@!', 'Wz' . a:direction)
+    call search('\v^((\s*' . l:commentbeg . ')|(\s*$))@!', 'Wz' . a:direction)
 endfunction
 
 nnoremap <script> <unique> <silent> <Plug>(PrevUncommented) :call <SID>GoToUncommented('b')<CR>
 nnoremap <script> <unique> <silent> <Plug>(NextUncommented) :call <SID>GoToUncommented('')<CR>
 
 " TODO:
-" - ignore blank lines
 " - allow define custom comment strings for languages with multiple comment strings
