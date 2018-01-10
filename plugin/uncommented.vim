@@ -24,8 +24,19 @@ function! s:GoToUncommented(direction)
     call search('\v^((\s*' . l:commentbeg . ')|(\s*$))@!', 'Wz' . a:direction)
 endfunction
 
+function! s:GoToCommented(direction)
+    let l:commentbeg = s:GetCommentString()
+    if strlen(l:commentbeg) == 0
+        return
+    endif
+
+    call search('\v^\s*' . l:commentbeg, 'Wz' . a:direction)
+endfunction
+
 nnoremap <script> <unique> <silent> <Plug>(PrevUncommented) :call <SID>GoToUncommented('b')<CR>
 nnoremap <script> <unique> <silent> <Plug>(NextUncommented) :call <SID>GoToUncommented('')<CR>
+nnoremap <script> <unique> <silent> <Plug>(PrevCommented)   :call <SID>GoToCommented('b')<CR>
+nnoremap <script> <unique> <silent> <Plug>(NextCommented)   :call <SID>GoToCommented('')<CR>
 
 " TODO:
 " - allow define custom comment strings for languages with multiple comment strings
