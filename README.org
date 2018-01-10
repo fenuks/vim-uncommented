@@ -1,24 +1,21 @@
 * Vim-uncommented
 
-Simple plugin to jump to next/previous uncommented line in file.
+Simple plugin to jump to next/previous (un)commented line in file.
 
 ** Example configuration
 
-~nmap <C-j> <Plug>(NextUncommented)~
-
-~nmap <C-k> <Plug>(PrevUncommented)~
-
-~nmap <C-S-j> <Plug>(NextCommented)~
-
-~nmap <C-S-k> <Plug>(PrevCommented)~
-
+#+BEGIN_SRC viml
+nmap <C-j>   <Plug>(NextUncommented)
+nmap <C-k>   <Plug>(PrevUncommented)
+nmap <C-S-j> <Plug>(NextCommented)
+nmap <C-S-k> <Plug>(PrevCommented)
+#+END_SRC
 
 or in spirit of =unimpaired.vim=
 
-~nmap ]c <Plug>(NextUncommented)~
-
-~nmap [c <Plug>(PrevUncommented)~
-
-~nmap ]C <Plug>(NextCommented)~
-
-~nmap [C <Plug>(PrevCommented)~
+#+BEGIN_SRC viml
+nmap ]c <Plug>(NextUncommented)
+nmap [c <Plug>(PrevUncommented)
+nmap ]C <Plug>(NextCommented)
+nmap [C <Plug>(PrevCommented)
+#+END_SRC
