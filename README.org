@@ -4,6 +4,21 @@ Simple plugin to jump to next/previous uncommented line in file.
 
 ** Example configuration
 
-~nmap <Leader>n <Plug>(NextUncommented)~
+~nmap <C-j> <Plug>(NextUncommented)~
 
-~nmap <Leader>p <Plug>(PrevUncommented)~
+~nmap <C-k> <Plug>(PrevUncommented)~
+
+~nmap <C-S-j> <Plug>(NextCommented)~
+
+~nmap <C-S-k> <Plug>(PrevCommented)~
+
+
+or in spirit of =unimpaired.vim=
+
+~nmap ]c <Plug>(NextUncommented)~
+
+~nmap [c <Plug>(PrevUncommented)~
+
+~nmap ]C <Plug>(NextCommented)~
+
+~nmap [C <Plug>(PrevCommented)~
